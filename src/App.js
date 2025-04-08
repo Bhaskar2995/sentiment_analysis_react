@@ -9,7 +9,7 @@ function App() {
   const analyzeSentiment = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:8000/analyze", {
+      const response = await fetch("https://sentiment-analysis-fxsu.onrender.com/analyze", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
