@@ -9,7 +9,7 @@ function App() {
   const analyzeSentiment = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://35.224.157.50/analyze", {
+      const response = await fetch("http://35.224.157.50:8000/analyze", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
