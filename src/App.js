@@ -9,7 +9,7 @@ function App() {
   const analyzeSentiment = async () => {
     setLoading(true);
     try {
-      const response = await fetch("https://sentiment-analysis-fxsu.onrender.com/analyze", {
+      const response = await fetch("http://localhost:8000/analyze", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -40,7 +40,8 @@ function App() {
       <button onClick={analyzeSentiment} disabled={loading}>
         {loading ? "Analyzing..." : "Analyze"}
       </button>
-      <div style={{ marginTop: "20px", fontSize: "18px" }}>
+      <div style={
+        { marginTop: "20px", fontSize: "18px" }}>
         {sentiment && <p><strong>Sentiment:</strong> {sentiment}</p>}
       </div>
     </div>
